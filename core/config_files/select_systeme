@@ -1,0 +1,30 @@
+#!/bin/bash
+# =====================================================================
+# Administration Système, Administration Réseau, etc ...
+# Programme concédé sous licence GPL-V3, une création de Jason GOUZIEN.
+# =====================================================================
+# Date de création      : 30-09-2020.
+# Date de modification  : 01-10-2020.
+# =====================================================================
+
+. core/config_files/configuration # importe les fonctions principales.
+
+menu_select_systeme()
+{
+    printf "${cr_rouge}[ 01 ]${cr_normal} Options : Parrot OS."${rr_ligne}
+
+    printf "${ligne_noir}"${rr_ligne}
+
+    read -p "[ == ] Choisissez une option : " votre_selection
+
+    case $votre_selection in
+        "1"|"01") ./${OS}parrot/parrot
+            ;;
+        *) ./select_systeme
+            ;;
+    esac
+}
+
+clear
+banniere_principal
+menu_select_systeme

@@ -1,0 +1,36 @@
+#!/bin/bash
+# =====================================================================
+# Administration Système, Administration Réseau, etc ...
+# Programme concédé sous licence GPL-V3, une création de Jason GOUZIEN.
+# =====================================================================
+# Date de création      : 30-09-2020.
+# Date de modification  : 01-10-2020.
+# =====================================================================
+
+. core/config_files/configuration # importe les fonctions principales.
+
+menu_principal()
+{
+    printf "${cr_rouge}[ 01 ]${cr_normal} Option(s) : Réseau."${rr_ligne}
+    printf "${cr_rouge}[ 02 ]${cr_normal} Option(s) : Système."${rr_ligne}
+    printf "${cr_rouge}[ 03 ]${cr_normal} Option(s) : Utilitaires."${rr_ligne}
+
+    printf "${ligne_noir}"${rr_ligne}
+
+    read -p "[ == ] Choisissez une option : " votre_selection
+    
+    case $votre_selection in 
+        "1"|"01") ./core/config_files/select_reseau
+            ;;
+        "2"|"02")./core/config_files/select_systeme
+            ;;
+        "3"|"03") ./core/config_files/select_utilitaires
+            ;;
+        *) ./breizhcybersec
+            ;;
+    esac
+}
+
+clear
+banniere_principal
+menu_principal

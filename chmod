@@ -1,0 +1,23 @@
+#!/bin/bash
+# =====================================================================
+# Administration Système, Administration Réseau, etc ...
+# Programme concédé sous licence GPL-V3, une création de Jason GOUZIEN.
+# =====================================================================
+# Date de création      : 30-09-2020.
+# Date de modification  : 01-10-2020.
+# =====================================================================
+
+dir_CONFIG="core/.CONFIG/"  # repertoire de fichiers de "configuration".
+dir_SYSTEME="core/OS/"      # repertoire des fonctions par OS.
+dir_UTILITAIRES="core/UTILITAIRES/"
+
+chmod +x bc-sysadmin
+
+chmod +x ${dir_CONFIG}configuration
+chmod +x ${dir_CONFIG}select_reseau
+chmod +x ${dir_CONFIG}select_systeme
+chmod +x ${dir_CONFIG}select_utilitaires
+
+chmod +x ${dir_SYSTEME}parrot/parrot
+
+chmod +x ${dir_UTILITAIRES}neofetch/neofetch

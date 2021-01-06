@@ -1,0 +1,36 @@
+#!/bin/bash
+# =====================================================================
+# Administration Système, Administration Réseau, etc ...
+# Programme concédé sous licence GPL-V3, une création de Jason GOUZIEN.
+# =====================================================================
+# Date de création      : 30-09-2020.
+# Date de modification  : 01-10-2020.
+# =====================================================================
+
+. core/config_files/configuration # importe les fonctions principales.
+
+menu_options_parrot()
+{
+    printf "${cr_rouge}[ 01 ]${cr_normal} Option(s) : Mettre à jour les dépots."${rr_ligne}
+    printf "${cr_rouge}[ 02 ]${cr_normal} Option(s) : Mettre à jour le système."${rr_ligne}
+    printf "${cr_rouge}[ 03 ]${cr_normal} Option(s) : Supprimer les paquets inutiles."${rr_ligne}
+
+    printf "${ligne_noir}"${rr_ligne}
+
+    read -p "[ == ] Choisissez une option : " votre_selection
+
+    case $votre_selection in
+        "1"|"01") sudo apt update
+            ;;
+        "2"|"02") sudo parrot-upgrade
+            ;;
+        "3"|"03") sudo apt autoremove
+            ;;
+        *) ./core/OS/parrot/parrot
+            ;;
+    esac
+}
+
+clear
+banniere_principal
+menu_options_parrot
