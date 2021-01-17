@@ -1,4 +1,4 @@
-#!/bin/bash
+#!data/data/com.termux/files/usr/bin/bash
 # =====================================================================
 # Administration Système, Administration Réseau, etc ...
 # Programme concédé sous licence GPL-V3, une création de Jason GOUZIEN.

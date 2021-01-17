@@ -1,4 +1,4 @@
-#!/bin/bash
+#!data/data/com.termux/files/usr/bin/bash
 # =====================================================================
 # Administration Système, Administration Réseau, etc ...
 # Programme concédé sous licence GPL-V3, une création de Jason GOUZIEN.
@@ -7,14 +7,13 @@
 # Date de modification  : 01-10-2020.
 # =====================================================================
 
-dir_CONFIG="core/.CONFIG/"  # repertoire de fichiers de "configuration".
+dir_CONFIG="core/config_files/"  # repertoire de fichiers de "configuration".
 dir_SYSTEME="core/OS/"      # repertoire des fonctions par OS.
-dir_UTILITAIRES="core/UTILITAIRES/"
+dir_UTILITAIRES="core/utilitaires/"
 
 chmod +x bc-sysadmin
 
 chmod +x ${dir_CONFIG}configuration
-chmod +x ${dir_CONFIG}select_reseau
 chmod +x ${dir_CONFIG}select_systeme
 chmod +x ${dir_CONFIG}select_utilitaires
 
